@@ -14,10 +14,10 @@ public class GameController : MonoBehaviour
     public int numberOfEnemy2;
     public GameObject enemy1;
     public GameObject enemy2;
-
     private float time = 0f;
     public List<GameObject> enemy1s;
     public List<GameObject> enemy2s;
+    public float spawningDelay;
 
     [Header("ScoreBoard")]
     [SerializeField]
@@ -108,7 +108,7 @@ public class GameController : MonoBehaviour
             Spawn();
             Debug.Log("Enemies spawned");
         }
-        if(gameOver != true && time >= 3f)
+        if(gameOver != true && time >= spawningDelay)
         {
             Spawn();
         }
