@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour
     {
         //Setting delay of spawning enemy. time % nf means n 
         time += Time.deltaTime;
-        if (time >= 3f && gameOver != true)
+        if (time >= 5f && gameOver != true)
         {
             time = time % 1f;
             Spawn();
