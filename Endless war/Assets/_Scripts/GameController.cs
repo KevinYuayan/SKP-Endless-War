@@ -102,17 +102,12 @@ public class GameController : MonoBehaviour
     {
         //Setting delay of spawning enemy. time % nf means n 
         time += Time.deltaTime;
-        if (time >= 5f && gameOver != true)
+        if (time >= spawningDelay && gameOver != true)
         {
             time = time % 1f;
             Spawn();
             Debug.Log("Enemies spawned");
         }
-        if(gameOver != true && time >= spawningDelay)
-        {
-            Spawn();
-        }
-
         if (restart == true)
         {
             if (Input.GetKeyDown(KeyCode.R))
