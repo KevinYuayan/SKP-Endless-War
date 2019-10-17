@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameController : MonoBehaviour
 {
     public GameController gc;
-    public float timeCounter;
     public bool gameOver;
     public bool restart;
     [Header("Enemies")]
@@ -15,12 +15,17 @@ public class GameController : MonoBehaviour
     public int numberOfEnemy2;
     public GameObject enemy1;
     public GameObject enemy2;
-    private float time = 0f;
     public List<GameObject> enemy1s;
     public List<GameObject> enemy2s;
+    [Header("BossEnemy")]
+    public GameObject bossEnemy;
+
     [Header("Stage Time Setting")]
+    private float time = 0f;
+    private float timeCounter;
     public float spawningDelay;
     public float stageTime;
+    private int seconds;
 
     [Header("ScoreBoard")]
     [SerializeField]
@@ -107,6 +112,7 @@ public class GameController : MonoBehaviour
         //Setting delay of spawning enemy. time % nf means n 
         time += Time.deltaTime;
         timeCounter += Time.deltaTime;
+        seconds = Convert.ToInt32(timeCounter);
         if (timeCounter < stageTime)
         {
             if (time >= spawningDelay && gameOver != true)
@@ -115,11 +121,12 @@ public class GameController : MonoBehaviour
                 time = time % 1f;
                 Spawn();
                 Debug.Log("Enemies spawned");
+                Debug.Log("Time Counter: " + seconds + "Second(s)");
             }
         }
-        else
+        if (seconds == stageTime)
         {
-            time = stageTime;
+            BossSpawn();
         }
         if (restart == true)
         {
@@ -143,6 +150,11 @@ public class GameController : MonoBehaviour
         {
             enemy2s.Add(Instantiate(enemy2));
         }
+    }
+    void BossSpawn()
+    {
+        Instantiate(bossEnemy);
+        Debug.Log("Boss spawned");
     }
     public void GameOver()
     {
