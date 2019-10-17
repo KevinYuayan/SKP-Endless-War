@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameController gc;
+    public float timeCounter;
     public bool gameOver;
     public bool restart;
     [Header("Enemies")]
@@ -17,7 +18,9 @@ public class GameController : MonoBehaviour
     private float time = 0f;
     public List<GameObject> enemy1s;
     public List<GameObject> enemy2s;
+    [Header("Stage Time Setting")]
     public float spawningDelay;
+    public float stageTime;
 
     [Header("ScoreBoard")]
     [SerializeField]
@@ -100,13 +103,23 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Setting delay of spawning enemy. time % nf means n 
         time += Time.deltaTime;
-        if (time >= spawningDelay && gameOver != true)
+        timeCounter += Time.deltaTime;
+        if (timeCounter < stageTime)
         {
-            time = time % 1f;
-            Spawn();
-            Debug.Log("Enemies spawned");
+            if (time >= spawningDelay && gameOver != true)
+            {
+
+                time = time % 1f;
+                Spawn();
+                Debug.Log("Enemies spawned");
+            }
+        }
+        else
+        {
+            time = stageTime;
         }
         if (restart == true)
         {
