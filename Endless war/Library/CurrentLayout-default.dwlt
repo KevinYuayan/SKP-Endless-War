@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 53
+  controlID: 76
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 119
+  controlID: 31
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +176,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -345,20 +345,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
-  - Assets/_Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 68
   m_LastProjectPath: D:\SKP-Endless-War\Endless war
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d6320000
-    m_LastClickedID: 13014
-    m_ExpandedIDs: 000000004e2d0000d62f000000ca9a3b
+    m_SelectedIDs: 18300000
+    m_LastClickedID: 12312
+    m_ExpandedIDs: 00000000502d0000d82f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -386,7 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e2d0000
+    m_ExpandedIDs: 00000000502d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -507,9 +507,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 72fbffff
-      m_LastClickedID: -1166
-      m_ExpandedIDs: 74fbffff
+      m_SelectedIDs: f02f0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 54fbffff74fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.036130752, y: 0.37193164, z: -3.9646485}
+    m_Target: {x: -0.091002956, y: 0.9827131, z: -3.8392065}
     speed: 2
-    m_Value: {x: 0.036130752, y: 0.37193164, z: -3.9646485}
+    m_Value: {x: -0.020395815, y: 0.9440497, z: -3.8107014}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -604,9 +604,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.8474274
+    m_Target: 6.6227984
     speed: 2
-    m_Value: 5.8474274
+    m_Value: 6.337606
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -692,18 +692,18 @@ MonoBehaviour:
       y: 17
       width: 877
       height: 695
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 438.5, y: 347.5}
+    m_Scale: {x: 1.7535053, y: 1.7535053}
+    m_Translation: {x: 437.495, y: 347.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -438.5
-      y: -347.5
-      width: 877
-      height: 695
+      x: -249.49738
+      y: -198.17447
+      width: 500.14105
+      height: 396.34894
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
