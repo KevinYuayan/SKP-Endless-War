@@ -973,6 +973,11 @@ PrefabInstance:
       propertyPath: spawningDelay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: bonusSCore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4633634427531086363, guid: 57c91b768a514bd4ab093a50864c7825,
         type: 3}
       propertyPath: m_LocalPosition.x
