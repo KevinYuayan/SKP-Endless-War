@@ -320,9 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea963c52ae41b754ea05e5599f5f4325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 0.4
-  resetPostion: 0
-  resetPoint: -9
+  horizontalSpeed: 0.1
+  resetPostion: 14.8
+  resetPoint: -10.8
 --- !u!114 &1455145340 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6867887021101874515, guid: 36734dc7651e7214e856a215fca649fc,
@@ -570,6 +570,32 @@ PrefabInstance:
       propertyPath: restartLabel
       value: 
       objectReference: {fileID: 1455145340}
+    - target: {fileID: 5473259080668282425, guid: 7be1d15077c896541aaef127baa794a6,
+        type: 3}
+      propertyPath: spawningDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473259080668282425, guid: 7be1d15077c896541aaef127baa794a6,
+        type: 3}
+      propertyPath: numberOfEnemy1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473259080668282425, guid: 7be1d15077c896541aaef127baa794a6,
+        type: 3}
+      propertyPath: numberOfEnemy2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473259080668282425, guid: 7be1d15077c896541aaef127baa794a6,
+        type: 3}
+      propertyPath: stageTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473259080668282425, guid: 7be1d15077c896541aaef127baa794a6,
+        type: 3}
+      propertyPath: bossEnemy
+      value: 
+      objectReference: {fileID: 1077780729872408355, guid: 4151b179d03bdfe41ab33dc9ba5759da,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be1d15077c896541aaef127baa794a6, type: 3}
 --- !u!1001 &6867887022488501295
@@ -766,17 +792,17 @@ PrefabInstance:
     - target: {fileID: 7422268988841677374, guid: 71dd1a278d3b7b042a695c0935e7aa63,
         type: 3}
       propertyPath: resetPostion
-      value: 0
+      value: 14.8
       objectReference: {fileID: 0}
     - target: {fileID: 7422268988841677374, guid: 71dd1a278d3b7b042a695c0935e7aa63,
         type: 3}
       propertyPath: resetPoint
-      value: -9
+      value: -10.8
       objectReference: {fileID: 0}
     - target: {fileID: 7422268988841677374, guid: 71dd1a278d3b7b042a695c0935e7aa63,
         type: 3}
       propertyPath: horizontalSpeed
-      value: 0.4
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71dd1a278d3b7b042a695c0935e7aa63, type: 3}
