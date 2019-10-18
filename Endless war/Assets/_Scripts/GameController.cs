@@ -17,13 +17,14 @@ public class GameController : MonoBehaviour
     public GameObject enemy2;
     public List<GameObject> enemy1s;
     public List<GameObject> enemy2s;
+    public float spawningDelay;
     [Header("BossEnemy")]
     public GameObject bossEnemy;
+    private bool bossSpawned = false;
 
     [Header("Stage Time Setting")]
     private float time = 0f;
     private float timeCounter;
-    public float spawningDelay;
     public float stageTime;
     private int seconds;
 
@@ -44,6 +45,10 @@ public class GameController : MonoBehaviour
     [Header("UI Control")]
     public GameObject StartLabel;
     public GameObject StartButton;
+
+    [Header("Bonus")]
+    public int bonusSCore;
+    private bool gotBonus = false;
     public int Lives
     {
 
@@ -124,7 +129,7 @@ public class GameController : MonoBehaviour
                 Debug.Log("Time Counter: " + seconds + "Second(s)");
             }
         }
-        if (seconds == stageTime)
+        if (seconds == stageTime && bossSpawned == false)
         {
             BossSpawn();
         }
@@ -151,9 +156,15 @@ public class GameController : MonoBehaviour
             enemy2s.Add(Instantiate(enemy2));
         }
     }
+    void addBonus()
+    {
+        _lives += 1;
+        gotBonus = true;
+    }
     void BossSpawn()
     {
         Instantiate(bossEnemy);
+        bossSpawned = true;
         Debug.Log("Boss spawned");
     }
     public void GameOver()
