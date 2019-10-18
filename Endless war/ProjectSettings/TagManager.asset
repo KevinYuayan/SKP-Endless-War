@@ -5,8 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
-  - Enemy
   - Bullet
+  - BonusLife
+  - Enemy1
+  - Enemy2
   layers:
   - Default
   - TransparentFX
