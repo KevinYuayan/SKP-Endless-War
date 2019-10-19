@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -14,10 +15,18 @@ public class GameController : MonoBehaviour
     public int numberOfEnemy2;
     public GameObject enemy1;
     public GameObject enemy2;
-
-    private float time = 0f;
     public List<GameObject> enemy1s;
     public List<GameObject> enemy2s;
+    public float spawningDelay;
+    [Header("BossEnemy")]
+    public GameObject bossEnemy;
+    private bool bossSpawned = false;
+
+    [Header("Stage Time Setting")]
+    private float time = 0f;
+    private float timeCounter;
+    public float stageTime;
+    private int seconds;
 
     [Header("ScoreBoard")]
     [SerializeField]
@@ -36,6 +45,10 @@ public class GameController : MonoBehaviour
     [Header("UI Control")]
     public GameObject StartLabel;
     public GameObject StartButton;
+
+    [Header("Bonus")]
+    public int bonusSCore;
+    private bool gotBonus = false;
     public int Lives
     {
 
@@ -100,19 +113,26 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Setting delay of spawning enemy. time % nf means n 
         time += Time.deltaTime;
-        if (time >= 3f && gameOver != true)
+        timeCounter += Time.deltaTime;
+        seconds = Convert.ToInt32(timeCounter);
+        if (timeCounter < stageTime)
         {
-            time = time % 1f;
-            Spawn();
-            Debug.Log("Enemies spawned");
-        }
-        if(gameOver != true && time >= 3f)
-        {
-            Spawn();
-        }
+            if (time >= spawningDelay && gameOver != true)
+            {
 
+                time = time % 1f;
+                Spawn();
+                Debug.Log("Enemies spawned");
+                Debug.Log("Time Counter: " + seconds + "Second(s)");
+            }
+        }
+        if (seconds == stageTime && bossSpawned == false)
+        {
+            BossSpawn();
+        }
         if (restart == true)
         {
             if (Input.GetKeyDown(KeyCode.R))
@@ -135,6 +155,17 @@ public class GameController : MonoBehaviour
         {
             enemy2s.Add(Instantiate(enemy2));
         }
+    }
+    void addBonus()
+    {
+        _lives += 1;
+        gotBonus = true;
+    }
+    void BossSpawn()
+    {
+        Instantiate(bossEnemy);
+        bossSpawned = true;
+        Debug.Log("Boss spawned");
     }
     public void GameOver()
     {

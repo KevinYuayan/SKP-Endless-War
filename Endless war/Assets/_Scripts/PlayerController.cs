@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag=="Enemy")
+        if (col.gameObject.tag == "Enemy1" || col.gameObject.tag == "Enemy2")
         {
             gameController.Lives -= 1;
             Debug.Log("Life decreased: " + gameController.Lives);

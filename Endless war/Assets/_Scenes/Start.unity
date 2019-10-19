@@ -928,6 +928,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: livesLabel
+      value: 
+      objectReference: {fileID: 546650287}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: scoreLabel
+      value: 
+      objectReference: {fileID: 115513064}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: gameOverLabel
+      value: 
+      objectReference: {fileID: 1550561584}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: restartLabel
+      value: 
+      objectReference: {fileID: 1455145340}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: StartButton
+      value: 
+      objectReference: {fileID: 709560998}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: StartLabel
+      value: 
+      objectReference: {fileID: 2058280702}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: numberOfEnemy1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: numberOfEnemy2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: spawningDelay
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
+        type: 3}
+      propertyPath: bonusSCore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4633634427531086363, guid: 57c91b768a514bd4ab093a50864c7825,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -983,36 +1033,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
-        type: 3}
-      propertyPath: livesLabel
-      value: 
-      objectReference: {fileID: 546650287}
-    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
-        type: 3}
-      propertyPath: scoreLabel
-      value: 
-      objectReference: {fileID: 115513064}
-    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
-        type: 3}
-      propertyPath: gameOverLabel
-      value: 
-      objectReference: {fileID: 1550561584}
-    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
-        type: 3}
-      propertyPath: restartLabel
-      value: 
-      objectReference: {fileID: 1455145340}
-    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
-        type: 3}
-      propertyPath: StartButton
-      value: 
-      objectReference: {fileID: 709560998}
-    - target: {fileID: 4633634427531086362, guid: 57c91b768a514bd4ab093a50864c7825,
-        type: 3}
-      propertyPath: StartLabel
-      value: 
-      objectReference: {fileID: 2058280702}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c91b768a514bd4ab093a50864c7825, type: 3}
 --- !u!1001 &7422268989168298961
