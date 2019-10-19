@@ -594,7 +594,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bossEnemy
       value: 
-      objectReference: {fileID: 1077780729872408355, guid: 4151b179d03bdfe41ab33dc9ba5759da,
+      objectReference: {fileID: 8799488454970867573, guid: 9c24dd09def985a409e85b73fb43c265,
         type: 3}
     - target: {fileID: 5473259080668282425, guid: 7be1d15077c896541aaef127baa794a6,
         type: 3}
@@ -663,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 6867887020516304535, guid: 36734dc7651e7214e856a215fca649fc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -13.907001
       objectReference: {fileID: 0}
     - target: {fileID: 6867887020516304535, guid: 36734dc7651e7214e856a215fca649fc,
         type: 3}
