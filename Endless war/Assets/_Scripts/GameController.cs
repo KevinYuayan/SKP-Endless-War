@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        livesLabel.text = "Lives: " + _lives.ToString();
         //Setting delay of spawning enemy. time % nf means n 
         time += Time.deltaTime;
         timeCounter += Time.deltaTime;
