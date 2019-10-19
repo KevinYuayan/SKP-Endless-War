@@ -91,17 +91,18 @@ public class PlayerController : MonoBehaviour
             fireSound.Play();
         }
     }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.tag=="Enemy")
-        {
-            gameController.Lives -= 1;
-            Debug.Log("Life decreased: " + gameController.Lives);
-            if(gameController.Lives == 0)
-            {
-                Destroy(this.gameObject);
-                gameController.GameOver();
-            }
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag == "Enemy1" || col.gameObject.tag == "Enemy2")
+    //    {
+    //        gameController.Lives -= 1;
+    //        Debug.Log("Life decreased: " + gameController.Lives);
+    //        Destroy(col.gameObject);
+    //        if (gameController.Lives == 0)
+    //        {
+    //            Destroy(this.gameObject);
+    //            gameController.GameOver();
+    //        }
+    //    }
+    //}
 }

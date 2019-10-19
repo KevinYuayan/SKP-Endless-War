@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7276258839980530959}
   - component: {fileID: 4348390827657060740}
+  - component: {fileID: 3961656826787490575}
   m_Layer: 0
   m_Name: boss1
   m_TagString: Untagged
@@ -80,3 +81,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &3961656826787490575
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077780729872408355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.3007274, y: 0.6472771}
+  - {x: -1.7957945, y: 0.67051125}
+  - {x: -1.1636767, y: 0.18701029}
+  - {x: 1.7118306, y: 0.13950598}
+  - {x: 2.3537142, y: -0.19918978}
+  - {x: 2.1097803, y: -0.40973115}
+  - {x: -1.3340516, y: -0.4322942}
+  - {x: -2.1520176, y: -0.11192989}
+  - {x: -2.302662, y: 0.64565945}

@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// File Name: Mover.cs
-/// Author: Philip Lee
-/// Last Modified by: Philip Lee
-/// Date Last Modified: Oct. 4, 2019
-/// Description: 
-/// Revision History:
-/// </summary>
-public class Mover : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
-    public float speed;
+    private GameController gc;
     private Rigidbody2D rBody;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
+        GameObject gco = GameObject.FindWithTag("GameController");
+        gc = gco.GetComponent<GameController>();
         rBody = GetComponent<Rigidbody2D>();
         rBody.velocity = transform.right * speed;
+
     }
 }
