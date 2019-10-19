@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
 
     [Header("Bonus")]
     public int bonusSCore;
+    private int bonusStack = 0;
     private bool gotBonus = false;
     public int Lives
     {
@@ -133,12 +134,22 @@ public class GameController : MonoBehaviour
         {
             BossSpawn();
         }
+
         if (restart == true)
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+        }
+
+        if(_score >= bonusSCore + (bonusStack * bonusSCore) && gotBonus == false)
+        {
+            addBonus();
+        }
+        if(_score > (bonusSCore * bonusStack) && gotBonus == true)
+        {
+            gotBonus = false;
         }
     }
     void Spawn()
@@ -160,6 +171,8 @@ public class GameController : MonoBehaviour
     {
         _lives += 1;
         gotBonus = true;
+        bonusStack += 1;
+        Debug.Log("Got bonus by gathering score over bonus score condition.");
     }
     void BossSpawn()
     {
